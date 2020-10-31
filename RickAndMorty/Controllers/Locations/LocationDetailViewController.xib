@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationDetailViewController" customModule="RickAndMorty" customModuleProvider="target">
+            <connections>
+                <outlet property="createdLabel" destination="anl-Bx-q7a" id="Nik-SA-3nd"/>
+                <outlet property="currentResidentsLabel" destination="ICz-6v-7Uw" id="Znx-rA-Saf"/>
+                <outlet property="dimensionLabel" destination="UhX-ck-Uyf" id="Pwe-yt-IkS"/>
+                <outlet property="locationNameLabel" destination="zAa-Jt-zow" id="bzP-p3-MPR"/>
+                <outlet property="residentsCollectionView" destination="mHH-eJ-VPK" id="Rjb-we-IUK"/>
+                <outlet property="typeLabel" destination="6kc-oS-8jw" id="nV7-z7-hss"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAa-Jt-zow">
+                    <rect key="frame" x="135.5" y="74" width="143.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PVZ-Ot-JQp">
+                    <rect key="frame" x="20" y="144" width="374" height="718"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kc-oS-8jw">
+                            <rect key="frame" x="0.0" y="0.0" width="78" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimension label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhX-ck-Uyf">
+                            <rect key="frame" x="0.0" y="40.5" width="120.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anl-Bx-q7a">
+                            <rect key="frame" x="0.0" y="81" width="101" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Residents:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-6v-7Uw">
+                            <rect key="frame" x="0.0" y="121.5" width="141.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mHH-eJ-VPK">
+                            <rect key="frame" x="0.0" y="162" width="374" height="556"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GXg-Tg-4Vr">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="estimatedItemSize" width="160" height="180"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="mHH-eJ-VPK" secondAttribute="bottom" id="DnZ-kh-zyX"/>
+                        <constraint firstItem="mHH-eJ-VPK" firstAttribute="top" secondItem="ICz-6v-7Uw" secondAttribute="bottom" constant="20" id="OgZ-HS-kJh"/>
+                        <constraint firstAttribute="trailing" secondItem="mHH-eJ-VPK" secondAttribute="trailing" id="dKF-Au-AN1"/>
+                        <constraint firstItem="mHH-eJ-VPK" firstAttribute="leading" secondItem="PVZ-Ot-JQp" secondAttribute="leading" id="f9x-o7-oZ5"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PVZ-Ot-JQp" secondAttribute="trailing" constant="20" id="U03-fb-FwC"/>
+                <constraint firstItem="zAa-Jt-zow" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="Wn7-jv-ZRo"/>
+                <constraint firstItem="PVZ-Ot-JQp" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="d0W-AG-KBy"/>
+                <constraint firstItem="zAa-Jt-zow" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oEl-7n-BXh"/>
+                <constraint firstItem="PVZ-Ot-JQp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pPe-8F-Krh"/>
+                <constraint firstItem="PVZ-Ot-JQp" firstAttribute="top" secondItem="zAa-Jt-zow" secondAttribute="bottom" constant="43.5" id="t9n-RR-afv"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
